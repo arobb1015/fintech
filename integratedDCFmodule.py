@@ -4,6 +4,7 @@ from datetime import date
 from math import *
 from wallStreetPrep import *
 
+print("asscheck")
 todaysCurrentDate = date.today()
 nextDate_for_FY_EoP = date(2020, 9, 30)
 time_Until_Next_FY_EoP = (nextDate_for_FY_EoP - todaysCurrentDate)
@@ -89,10 +90,10 @@ else:
 mre_proceeds_from_exercised_options = (mrp_weightedAverageExercisePricePerShare * mre_number_of_in_the_money_exercisable_options)
 mre_number_of_CommonStockSharesRepurchased = (mre_proceeds_from_exercised_options / mrp_MarketValueOfCommonStockPricePerShare)
 
-'''When calculating Diluted Shares Outstanding with the TSM, 
+'''When calculating Diluted Shares Outstanding with the TSM,
    we assume that the proceeds from options that were exercised are
    immediately/instantaneously used to repurchase publicly issued
-   common stock so as to mitigate the dilutive effect of stock 
+   common stock so as to mitigate the dilutive effect of stock
    options on the publicly traded equity'''
 
 mre_net_dilutive_options = (mrp_stockOptionsOutstanding - mre_number_of_CommonStockSharesRepurchased)
